@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProjectMVVM.Views.LoginPageView"
+              Background="##C0C0C0">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{Binding PageColor}" Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Label Text="Log In " VerticalOptions="Center" FontAttributes="Bold" FontSize="40" TextColor="Gray" ></Label>
+
+            <!--<Label x:Name="ErrorMassage" TextColor="Red" Text="{Binding ErrorMessage}"></Label>--> 
+            <Label Text="Email"></Label>
+            <Entry x:Name="Email" Text="{Binding Useremail}" TextColor="Black" PlaceholderColor="Gray"></Entry>
+
+            <Label Text="Password"></Label>
+            <Entry x:Name="Password" IsPassword="True" Text="{Binding Password}" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Button x:Name="LodinButton" 
+                    Text="Login" 
+                    TextColor="Gray"
+                    BackgroundColor="#F5F110"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    BorderColor="ForestGreen"
+                    Command="{Binding LoginCommand}">
+                
+            </Button>
+
+            <Label HorizontalOptions="Center" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Dont hane account" TextColor="Gray"></Span>
+                        <Span Text="Sign Up" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
